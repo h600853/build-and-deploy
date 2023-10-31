@@ -22,3 +22,6 @@ export const getSecondsLeftOfYear = (now) => {
 export const getMinutesLeftOfYear = (now) => {
     return Math.floor(getSecondsLeftOfYear(now) / 60);
 }
+export const getHoursLeftOfYear = (now) => {
+    return Math.floor(getMinutesLeftOfYear(now) / 60);
+}

@@ -1,4 +1,4 @@
-import { getSecondsLeftOfYear, getTimeString, getMinutesLeftOfYear} from "./clock";
+import { getSecondsLeftOfYear, getTimeString, getMinutesLeftOfYear, getHoursLeftOfYear} from "./clock";
 
 test('getTimeString formats time string correctly for 10:20:30', () => {
     const now = new Date(0, 0, 0, 10, 20, 30);
@@ -20,5 +20,10 @@ test('getMinutesLeftOfYear returns the correct amount of minutes', () => {
     const now = new Date("2022-12-31T23:00:00.000Z");
     const timeString = getMinutesLeftOfYear(now);
     expect(timeString).toBe(60);
+});
+test('getHoursLeftOfYear returns the correct amount of hours', () => {
+    const now = new Date("2022-12-31T23:00:00.000Z");
+    const timeString = getHoursLeftOfYear(now);
+    expect(timeString).toBe(1);
 });
 
