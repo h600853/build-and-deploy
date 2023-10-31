@@ -21,6 +21,6 @@ jobs:
 
       - name: Archive artifacts
         uses: actions/upload-artifact@v3
-         with:
-           name: artifact
-           path: ./code/dist
+        with:
+          name: artifact
+          path: ./code/dist
