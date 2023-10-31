@@ -25,3 +25,6 @@ export const getMinutesLeftOfYear = (now) => {
 export const getHoursLeftOfYear = (now) => {
     return Math.floor(getMinutesLeftOfYear(now) / 60);
 }
+export const getDaysLeftOfYear = (now) => {
+    return Math.floor(getHoursLeftOfYear(now) / 24);
+}
